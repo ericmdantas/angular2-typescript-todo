@@ -7,6 +7,10 @@
     "emitDecoratorMetadata": true
   },
   "files": [
-    "index.ts"
+    "index.ts",
+    "./common/directives/important-text.ts",
+    "./common/directives/logger.ts",
+    "./common/directives/uppercase.ts",
+    "./todo/components/todo.ts"
   ]
 }

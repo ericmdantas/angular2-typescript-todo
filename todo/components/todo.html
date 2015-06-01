@@ -2,9 +2,11 @@
     <form class="overflow-hidden"
           onsubmit="return false;"
           [control-group]="todoForm">
-        <h1 align="center">{{title}}</h1>
+
+        <h1 align="center" important-text uppercase>{{title}}</h1>
 
     <input type="text"
+           logger
            #tmessage
            control="message"
            (keyup.enter)="add(tmessage)"
@@ -12,7 +14,8 @@
            autofocus/>
 
     <button type="button"
-            (click)="add(tmessage)"
+            logger
+            (click)="add(tmessage);"
             [disabled]="!todoForm.valid">+</button>
     </form>
 

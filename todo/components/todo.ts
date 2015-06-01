@@ -1,8 +1,12 @@
-/// <reference path="../typings/angular2/angular2.d.ts" />
+/// <reference path="../../typings/angular2/angular2.d.ts" />
 
 import {Component, View} from 'angular2/angular2';
 import {Validators, ControlGroup, FormBuilder, formDirectives} from 'angular2/forms';
+import {Inject} from 'angular2/di';
 import {NgFor} from 'angular2/directives';
+import {ImportantText} from '../../common/directives/import-text.directive';
+import {Uppercase} from '../../common/directives/uppercase.directive';
+import {Logger} from '../../common/directives/logger.directives';
 
 interface ITodoList {
     message: string;
@@ -14,11 +18,11 @@ interface ITodoList {
     appInjector: [FormBuilder]
 })
 @View({
-    templateUrl: 'components/todo.html',
-    directives: [NgFor, formDirectives]
+    templateUrl: 'todo/components/todo.html',
+    directives: [NgFor, formDirectives, ImportantText, Uppercase, Logger]
 })
 export class Todo {
-    title: string = 'TODO!';
+    title: string = 'todo!';
     message: string;
     id: number;
     todoList: Array<ITodoList>;
