@@ -13,9 +13,9 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 var angular2_1 = require('angular2/angular2');
 var forms_1 = require('angular2/forms');
 var directives_1 = require('angular2/directives');
-var import_text_directive_1 = require('../../common/directives/import-text.directive');
+var important_text_directive_1 = require('../../common/directives/important-text.directive');
 var uppercase_directive_1 = require('../../common/directives/uppercase.directive');
-var logger_directives_1 = require('../../common/directives/logger.directives');
+var logger_directive_1 = require('../../common/directives/logger.directive');
 var Todo = (function () {
     function Todo() {
         this.title = 'todo!';
@@ -44,7 +44,7 @@ var Todo = (function () {
         }),
         angular2_1.View({
             templateUrl: 'todo/components/todo.html',
-            directives: [directives_1.NgFor, forms_1.formDirectives, import_text_directive_1.ImportantText, uppercase_directive_1.Uppercase, logger_directives_1.Logger]
+            directives: [directives_1.NgFor, forms_1.formDirectives, important_text_directive_1.ImportantText, uppercase_directive_1.Uppercase, logger_directive_1.Logger]
         }), 
         __metadata('design:paramtypes', [])
     ], Todo);

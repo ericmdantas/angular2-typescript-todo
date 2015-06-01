@@ -4,9 +4,9 @@ import {Component, View} from 'angular2/angular2';
 import {Validators, ControlGroup, FormBuilder, formDirectives} from 'angular2/forms';
 import {Inject} from 'angular2/di';
 import {NgFor} from 'angular2/directives';
-import {ImportantText} from '../../common/directives/import-text.directive';
+import {ImportantText} from '../../common/directives/important-text.directive';
 import {Uppercase} from '../../common/directives/uppercase.directive';
-import {Logger} from '../../common/directives/logger.directives';
+import {Logger} from '../../common/directives/logger.directive';
 
 interface ITodoList {
     message: string;
