@@ -37,3 +37,8 @@ ul li {
 .overflow-hidden {
     overflow: hidden;
 }
+
+.error {
+    border: 1px solid red;
+    outline: 0;
+}

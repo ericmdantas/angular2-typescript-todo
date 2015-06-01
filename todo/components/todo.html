@@ -10,6 +10,7 @@
            #tmessage
            control="message"
            (keyup.enter)="add(tmessage)"
+           [class.error]="!todoForm.valid "
            placeholder="what do you have todo?"
            autofocus/>
 
