@@ -1,0 +1,21 @@
+{
+  "name": "ng2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch -m commonjs -t es5 --emitDecoratorMetadata main.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "es6-module-loader": "^0.16.6",
+    "systemjs": "^0.16.11",
+    "traceur": "0.0.89"
+  },
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.25",
+    "reflect-metadata": "^0.1.0"
+  }
+}

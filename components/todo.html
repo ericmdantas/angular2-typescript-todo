@@ -1,0 +1,23 @@
+<div >
+    <form class="overflow-hidden"
+          onsubmit="return false;"
+          [control-group]="todoForm">
+        <h1 align="center">{{title}}</h1>
+
+    <input type="text"
+           #tmessage
+           control="message"
+           (keyup.enter)="add(tmessage)"
+           placeholder="what do you have todo?"
+           autofocus/>
+
+    <button type="button"
+            (click)="add(tmessage)"
+            [disabled]="!todoForm.valid">+</button>
+    </form>
+
+    <ul>
+        <li *ng-for="#t of todoList; #i = index;"
+            (click)="remove(t.id);">{{i}}: {{t.message}}</li>
+    </ul>
+</div>
