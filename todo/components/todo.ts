@@ -2,6 +2,7 @@
 
 import {Component, View} from 'angular2/angular2';
 import {Validators, ControlGroup, FormBuilder, formDirectives} from 'angular2/forms';
+import {TodoService} from '../services/todo.service';
 import {Inject} from 'angular2/di';
 import {NgFor} from 'angular2/directives';
 import {ImportantText} from '../../common/directives/important-text.directive';
@@ -15,7 +16,7 @@ interface ITodoList {
 
 @Component({
     selector: 'todo',
-    appInjector: [FormBuilder]
+    appInjector: [FormBuilder, TodoService]
 })
 @View({
     templateUrl: 'todo/components/todo.html',
@@ -27,28 +28,37 @@ export class Todo {
     id: number;
     todoList: Array<ITodoList>;
     todoForm: ControlGroup;
+    ts: TodoService;
 
-    constructor() {
-
-        var _fb = new FormBuilder();
+    constructor(@Inject(FormBuilder) fb: FormBuilder, ts: TodoService) {
 
         this.message = '';
         this.id = 0;
         this.todoList = [];
+        this.ts = ts;
 
-        this.todoForm = _fb.group({
+        this.todoForm = fb.group({
             "message": ["something todo soon...", Validators.required]
         });
     }
 
     add(info:{value:string}) {
-        this.todoList.push({message: info.value, id: Date.now()});
+        this
+            .ts
+            .add(info.value)
+            .then(r => this.todoList.push({message: r, id: Date.now()}));
+
     }
 
     remove(id:number) {
-        this.todoList.forEach((t, i) => {
-            if (t.id === id)
-                this.todoList.splice(1, i);
-        });
+        this
+            .ts
+            .remove(id)
+            .then(_ => {
+                this.todoList.forEach((t, i) => {
+                    if (t.id === id)
+                        this.todoList.splice(1, i);
+                });
+            });
     }
 }
