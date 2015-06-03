@@ -6,11 +6,5 @@
     "target": "es5",
     "emitDecoratorMetadata": true
   },
-  "files": [
-    "index.ts",
-    "./common/directives/important-text.directive.ts",
-    "./common/directives/logger.directive.ts",
-    "./common/directives/uppercase.directive.ts",
-    "./todo/components/todo.ts"
-  ]
+  "files": ["index.ts"]
 }
