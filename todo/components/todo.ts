@@ -9,7 +9,7 @@ import {ImportantText} from '../../common/directives/important-text.directive';
 import {Uppercase} from '../../common/directives/uppercase.directive';
 import {Logger} from '../../common/directives/logger.directive';
 
-interface ITodoList {
+type ITodoList = {
     message: string;
     id: number;
 }
