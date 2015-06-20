@@ -20,9 +20,9 @@ var Logger = (function () {
     Logger = __decorate([
         angular2_1.Directive({
             selector: '[logger]',
-            hostListeners: {
-                'click': 'log()',
-                'keyup.enter': 'log()'
+            host: {
+                '(click)': 'log()',
+                '(keyup.enter)': 'log()'
             }
         }), 
         __metadata('design:paramtypes', [])

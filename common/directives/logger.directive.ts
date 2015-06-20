@@ -5,9 +5,9 @@ import {Inject} from 'angular2/di';
 
 @Directive({
     selector: '[logger]',
-    hostListeners: {
-        'click': 'log()',
-        'keyup.enter': 'log()'
+    host: {
+        '(click)': 'log()',
+        '(keyup.enter)': 'log()'
     }
 })
 export class Logger {
