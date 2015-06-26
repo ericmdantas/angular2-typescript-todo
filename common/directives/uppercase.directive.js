@@ -17,7 +17,7 @@ var angular2_1 = require('angular2/angular2');
 var angular2_2 = require('angular2/angular2');
 var Uppercase = (function () {
     function Uppercase(el) {
-        el.domElement.style.textTransform = 'uppercase';
+        el.nativeElement.style.textTransform = 'uppercase';
     }
     Uppercase = __decorate([
         angular2_1.Directive({

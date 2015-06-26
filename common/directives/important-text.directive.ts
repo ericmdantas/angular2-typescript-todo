@@ -11,6 +11,6 @@ export class ImportantText {
     el: ElementRef;
 
     constructor(@Inject(ElementRef) el: ElementRef) {
-        setTimeout( _ => el.domElement.style.color = 'red', 1234);
+        setTimeout( _ => el.nativeElement.style.color = 'red', 1234);
     }
 }

@@ -17,7 +17,7 @@ var angular2_1 = require('angular2/angular2');
 var di_1 = require('angular2/di');
 var ImportantText = (function () {
     function ImportantText(el) {
-        setTimeout(function (_) { return el.domElement.style.color = 'red'; }, 1234);
+        setTimeout(function (_) { return el.nativeElement.style.color = 'red'; }, 1234);
     }
     ImportantText = __decorate([
         angular2_1.Directive({

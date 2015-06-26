@@ -11,6 +11,6 @@ export class Uppercase {
     el: ElementRef;
 
     constructor(@Inject(ElementRef) el: ElementRef) {
-        el.domElement.style.textTransform = 'uppercase';
+        el.nativeElement.style.textTransform = 'uppercase';
     }
 }
