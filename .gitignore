@@ -1,6 +1,7 @@
 .idea
 node_modules
-main.js
-components/*.js
-components/**/*.js
+common/*.js
+todo/**/*.js
+tests/**/*.js
+index.js
 *.js
