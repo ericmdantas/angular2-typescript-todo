@@ -14,6 +14,7 @@
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.37",
     "karma-jasmine": "^0.3.5",
+    "karma-jspm": "^1.1.5",
     "karma-phantomjs-launcher": "^0.2.0",
     "phantomjs": "^1.9.17",
     "systemjs": "^0.16.11",
@@ -22,5 +23,19 @@
   "dependencies": {
     "angular2": "^2.0.0-alpha.25",
     "reflect-metadata": "^0.1.0"
+  },
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-alpha.28",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4",
+      "traceur": "github:jmcriffey/bower-traceur@0.0.88",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88"
+    }
   }
 }
