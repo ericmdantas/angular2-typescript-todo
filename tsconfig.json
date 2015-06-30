@@ -5,6 +5,5 @@
     "watch": true,
     "target": "es5",
     "emitDecoratorMetadata": true
-  },
-  "files": ["index.ts"]
+  }
 }
