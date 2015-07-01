@@ -57,7 +57,7 @@ export class Todo {
             .then(_ => {
                 this.todoList.forEach((t, i) => {
                     if (t.id === id)
-                        this.todoList.splice(1, i);
+                        this.todoList.splice(i, 1);
                 });
             });
     }
