@@ -16,7 +16,7 @@ type ITodoList = {
 
 @Component({
     selector: 'todo',
-    appInjector: [FormBuilder, TodoService]
+    viewInjector: [FormBuilder, TodoService]
 })
 @View({
     templateUrl: 'todo/components/todo.html',
