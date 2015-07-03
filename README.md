@@ -2,7 +2,7 @@
 
 Angular2 Todo in Typescript (always updated with the latest from tsc and ng2).
 
-# Fork this repo: 
+# Fork this repo
 
 
 ## Install Typescript (and the definition manager):
