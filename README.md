@@ -2,15 +2,8 @@
 
 Angular2 Todo in Typescript (always updated with the latest from tsc and ng2).
 
-# let's get it started
+# Fork this repo: 
 
-## Clone this repo: 
-
-```
-
-$ git clone https://github.com/ericmdantas/angular2-typescript-todo.git
-
-```
 
 ## Install Typescript (and the definition manager):
 
