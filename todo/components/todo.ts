@@ -21,6 +21,7 @@ type ITodoList = {
 })
 @View({
     templateUrl: 'todo/components/todo.html',
+    styleUrls: ['todo/components/todo.css'],
     directives: [NgFor, formDirectives, ImportantText, Uppercase, Logger, SubmitButton]
 })
 export class Todo {
