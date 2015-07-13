@@ -8,6 +8,7 @@ import {NgFor} from 'angular2/directives';
 import {ImportantText} from '../../common/directives/important-text.directive';
 import {Uppercase} from '../../common/directives/uppercase.directive';
 import {Logger} from '../../common/directives/logger.directive';
+import {SubmitButton} from '../../common/components/submit_button';
 
 type ITodoList = {
     message: string;
@@ -20,7 +21,7 @@ type ITodoList = {
 })
 @View({
     templateUrl: 'todo/components/todo.html',
-    directives: [NgFor, formDirectives, ImportantText, Uppercase, Logger]
+    directives: [NgFor, formDirectives, ImportantText, Uppercase, Logger, SubmitButton]
 })
 export class Todo {
     title: string = 'todo!';

@@ -14,10 +14,8 @@
            placeholder="what do you have todo?"
            autofocus/>
 
-    <button type="button"
-            logger
-            (click)="add(tmessage);"
-            [disabled]="!todoForm.valid">+</button>
+    <submit-button [submit-form]="todoForm" (^click)="add(tmessage)"></submit-button>
+
     </form>
 
     <ul>
