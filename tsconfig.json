@@ -4,6 +4,7 @@
     "module": "commonjs",
     "watch": true,
     "target": "es5",
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   }
 }

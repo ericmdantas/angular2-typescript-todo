@@ -18,7 +18,8 @@
     "phantomjs": "^1.9.17"
   },
   "dependencies": {
-    "reflect-metadata": "^0.1.0"
+    "reflect-metadata": "^0.1.0",
+    "rx": "^2.5.3"
   },
   "jspm": {
     "directories": {},
