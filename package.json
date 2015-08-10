@@ -9,16 +9,12 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "jasmine-core": "^2.3.4",
-    "karma": "^0.12.37",
-    "karma-jasmine": "^0.3.5",
-    "karma-jspm": "^1.1.5",
-    "karma-phantomjs-launcher": "^0.2.0",
-    "phantomjs": "^1.9.17"
-  },
+  "devDependencies": {},
   "dependencies": {
+    "es6-module-loader": "^0.17.5",
     "reflect-metadata": "^0.1.0",
-    "rx": "^2.5.3"
+    "rx": "^2.5.3",
+    "systemjs": "~0.18.9",
+    "traceur": "0.0.91"
   }
 }

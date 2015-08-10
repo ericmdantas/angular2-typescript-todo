@@ -1,0 +1,33 @@
+<div class="todo_container">
+    <p class="todo_title">ng2do</p>
+
+    <div id="todo_form_container">
+        <form onsubmit="return false;"
+              [ng-form-model]="todoForm"
+              (submit)="add(todoForm.value.message)">
+
+            <input type="text"
+                   ng-control="message"
+                   placeholder="What do you have to do?"
+                   autofocus
+                   class="todo_input" />
+
+            <button type="submit"
+                    class="todo_button">+</button>
+        </form>
+
+        <div id="todo_list_container">
+            <br>
+
+            <h3 class="nothing_to_do"
+                [hidden]="todoList.length">Nothing to do. Go play outside!</h3>
+
+            <div class="todo_item" *ng-for="#t of todoList;">
+                <span [inner-text]="t.message"></span>
+                <button type="button"
+                        (click)="remove(t.createdAt)"
+                        class="todo_exclude_item">x</button>
+            </div>
+        </div>
+    </div>
+</div>

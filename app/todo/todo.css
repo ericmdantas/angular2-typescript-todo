@@ -1,0 +1,103 @@
+.todo_title {
+    position: absolute;
+    top: -60px;
+    background-color: #fff;
+    padding: 10px 20px 10px 10px;
+    left: 0;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.todo_container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 10px 10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 0 #e5e5e5,
+                0 0 2px rgba(0,0,0,.12),
+                0 2px 4px rgba(0,0,0,.24);
+    margin-top: 50px;
+}
+
+.todo_input {
+    width: 85%;
+    padding: 5px;
+    font-size: 17px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+}
+
+.todo_button {
+    position: absolute;
+    padding: 9px 15px;
+    background-color: #fff;
+    outline: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px #bbb;
+    font-weight: bold;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: -10px;
+    border-radius: 100%;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
+
+.todo_item {
+    padding: 10px 50px 10px 10px;
+    border: 1px solid #eee;
+    word-break: break-word;
+    position: relative;
+}
+
+.todo_exclude_item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    border: none;
+    color: red;
+    padding: 12px;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+    outline: 0;
+}
+
+.nothing_to_do {
+    color: #777;
+    text-align: center;
+}
+
+.todo_input:focus {
+    border-bottom-color: steelblue;
+    outline: none;
+}
+
+.todo_button:focus {
+    border-color: steelblue;
+}
+
+.todo_button:active {
+    color: #fff;
+    background-color: steelblue;
+    outline: 0;
+    box-shadow: none;
+}
+
+.todo_exclude_item:active {
+    color: #fff;
+    background-color: rgba(212, 31, 31, 0.86);
+    outline: 0;
+}
