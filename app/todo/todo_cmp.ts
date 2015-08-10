@@ -52,8 +52,4 @@ export class TodoCmp {
                 });
             });
     }
-
-    edit():void {
-
-    }
 }

@@ -13,7 +13,8 @@
                    class="todo_input" />
 
             <button type="submit"
-                    class="todo_button">+</button>
+                    class="todo_button"
+                    [disabled]="!todoForm.valid">+</button>
         </form>
 
         <div id="todo_list_container">
@@ -23,7 +24,9 @@
                 [hidden]="todoList.length">Nothing to do. Go play outside!</h3>
 
             <div class="todo_item" *ng-for="#t of todoList;">
+
                 <span [inner-text]="t.message"></span>
+
                 <button type="button"
                         (click)="remove(t.createdAt)"
                         class="todo_exclude_item">x</button>
