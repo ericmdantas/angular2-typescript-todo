@@ -3,7 +3,7 @@
 import {Component, View} from 'angular2/angular2';
 import {NgFor} from 'angular2/directives';
 import {Inject} from 'angular2/di';
-import {FormBuilder, formDirectives, Validators, ControlGroup} from 'angular2/forms';
+import {FormBuilder, FORM_DIRECTIVES, Validators, ControlGroup} from 'angular2/forms';
 import {TodoModel} from 'app/todo/todo_model.js';
 import {TodoService} from 'app/todo/todo_service.js';
 
@@ -14,7 +14,7 @@ import {TodoService} from 'app/todo/todo_service.js';
 @View({
     templateUrl: 'app/todo/todo.html',
     styleUrls: ['app/todo/todo.css'],
-    directives: [formDirectives, NgFor]
+    directives: [FORM_DIRECTIVES, NgFor]
 })
 
 export class TodoCmp {
