@@ -1,10 +1,21 @@
 {
-  "compilerOptions":
-  {
-    "module": "commonjs",
-    "watch": true,
-    "target": "es5",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
-  }
+    "compilerOptions": {
+        "module": "commonjs",
+        "watch": true,
+        "target": "es5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "filesGlob": [
+        "index.ts",
+        "app/**/*.ts"
+    ],
+    "files": [
+        "index.ts",
+        "app/app.ts",
+        "app/todo/todo.ts",
+        "app/todo/todo_cmp.ts",
+        "app/todo/todo_model.ts",
+        "app/todo/todo_service.ts"
+    ]
 }

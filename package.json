@@ -1,16 +1,16 @@
 {
   "name": "ng2",
   "version": "1.0.0",
-  "description": "",
+  "description": "angular2-todo-typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc --watch -m commonjs -t es5 --emitDecoratorMetadata main.ts"
+    "start": "tsc"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {},
   "dependencies": {
+    "angular2": "^2.0.0-alpha.35",
     "es6-module-loader": "^0.17.5",
     "reflect-metadata": "^0.1.0",
     "systemjs": "~0.18.9",

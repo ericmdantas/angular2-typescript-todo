@@ -1,6 +1,5 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
-import {EventEmitter} from 'angular2/angular2';
 import {TodoModel} from 'app/todo/todo_model.js';
 import * as Rx from 'rx';
 
