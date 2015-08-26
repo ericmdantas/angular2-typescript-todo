@@ -11,7 +11,7 @@ export class TodoService {
         return _ee.toRx();
     }
 
-    remove(id: number):Rx.Observable {
+    remove(id: number):EventEmitter {
         let _ee = new EventEmitter();
         setTimeout(() => _ee.next(id));
 
