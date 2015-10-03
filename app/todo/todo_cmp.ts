@@ -1,9 +1,6 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
-import {Component, View} from 'angular2/angular2';
-import {NgFor} from 'angular2/directives';
-import {Inject} from 'angular2/di';
-import {FormBuilder, FORM_DIRECTIVES, Validators, ControlGroup} from 'angular2/forms';
+import {Component, View, FormBuilder, FORM_DIRECTIVES, Validators, ControlGroup, Inject, NgFor} from 'angular2/angular2';
 import {TodoModel} from 'app/todo/todo_model.js';
 import {TodoService} from 'app/todo/todo_service.js';
 
@@ -19,12 +16,11 @@ import {TodoService} from 'app/todo/todo_service.js';
 
 export class TodoCmp {
     todo: TodoModel;
-    todoService: TodoService;
     todoForm: ControlGroup;
     todoList: TodoModel[] = [];
 
-    constructor(@Inject(TodoService) todoService: TodoService, @Inject(FormBuilder) fb: FormBuilder) {
-        this.todoService = todoService;
+    constructor(@Inject(TodoService) private _todoService: TodoService,
+                @Inject(FormBuilder) fb: FormBuilder) {
 
         this.todoForm = fb.group({
            "message": ["", Validators.required]
@@ -34,15 +30,16 @@ export class TodoCmp {
     add(message: string):void {
         this.todo = new TodoModel(message);
 
-        this.todoService
+        this._todoService
             .add(this.todo)
             .subscribe(result => {
                 this.todoList.push(result);
+                this.todoForm.controls.message.updateValue("");
             });
     }
 
     remove(id: number):void {
-        this.todoService
+        this._todoService
             .remove(id)
             .subscribe(id => {
                 this.todoList.forEach((tl, index) => {
