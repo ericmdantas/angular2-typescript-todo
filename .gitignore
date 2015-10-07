@@ -6,3 +6,4 @@ todo/**/*.js
 tests/**/*.js
 index.js
 *.js
+*.log

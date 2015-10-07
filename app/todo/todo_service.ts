@@ -8,13 +8,13 @@ export class TodoService {
         let _ee = new EventEmitter();
         setTimeout(() => _ee.next(todo));
 
-        return _ee._subject;
+        return _ee.toRx();
     }
 
     remove(id: number):EventEmitter {
         let _ee = new EventEmitter();
         setTimeout(() => _ee.next(id));
 
-        return _ee._subject;
+        return _ee.toRx();
     }
 }
