@@ -8,7 +8,7 @@ export class TodoService {
         let _ee = new EventEmitter();
         setTimeout(() => _ee.next(todo));
 
-        return _ee._subject;
+        return _ee.toRx();
     }
 
     remove(id: number):EventEmitter {
