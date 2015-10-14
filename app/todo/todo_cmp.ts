@@ -11,7 +11,6 @@ import {TodoService} from 'app/todo/todo_service.js';
     providers: [TodoService, FormBuilder],
     directives: [FORM_DIRECTIVES, NgFor]
 })
-
 export class TodoCmp {
     todo: TodoModel;
     todoForm: ControlGroup;
