@@ -8,7 +8,7 @@ import {TodoService} from 'app/todo/todo_service.js';
     selector: 'todo',
     templateUrl: 'app/todo/todo.html',
     styleUrls: ['app/todo/todo.css'],
-    bindings: [TodoService, FormBuilder],
+    providers: [TodoService, FormBuilder],
     directives: [FORM_DIRECTIVES, NgFor]
 })
 
