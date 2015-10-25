@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "watch": true,
         "target": "es5",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true
