@@ -12,7 +12,6 @@
   "dependencies": {
     "angular2": "^2.0.0-alpha.45",
     "reflect-metadata": "^0.1.0",
-    "systemjs": "~0.18.9",
-    "traceur": "0.0.91"
+    "systemjs": "~0.18.9"
   }
 }
