@@ -1,20 +1,16 @@
-/// <reference path="../../typings/tsd.d.ts" />
-
-import {EventEmitter} from 'angular2/angular2';
+import * as Rx from '@reactivex/rxjs/dist/cjs/Rx';
 import {TodoModel} from 'app/todo/todo_model.js';
 
 export class TodoService {
-    add(todo: TodoModel):EventEmitter {
-        let _ee = new EventEmitter();
-        setTimeout(() => _ee.next(todo));
-
-        return _ee.toRx();
+    add(todo: TodoModel):Rx.Observable<any> {
+      return Rx.Observable.create((o) => {
+        o.next(todo);
+      });
     }
 
-    remove(id: number):EventEmitter {
-        let _ee = new EventEmitter();
-        setTimeout(() => _ee.next(id));
-
-        return _ee.toRx();
+    remove(id: number):Rx.Observable<any> {
+      return Rx.Observable.create((o) => {
+        o.next(id);
+      });
     }
 }
