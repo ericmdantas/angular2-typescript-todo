@@ -1,9 +1,10 @@
 .idea
 node_modules
 jspm_packages
-common/*.js
-todo/**/*.js
+app/**/*.js
 tests/**/*.js
 index.js
 *.js
 *.log
+
+!karma*.js

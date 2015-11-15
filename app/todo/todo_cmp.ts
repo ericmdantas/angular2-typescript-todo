@@ -1,4 +1,13 @@
-import {Component, FormBuilder, FORM_DIRECTIVES, Validators, ControlGroup, Inject, NgFor} from 'angular2/angular2';
+import {
+  Component,
+  FormBuilder,
+  FORM_DIRECTIVES,
+  Validators,
+  ControlGroup,
+  Inject,
+  NgFor
+} from 'angular2/angular2';
+
 import {TodoModel} from 'app/todo/todo_model.js';
 import {TodoService} from 'app/todo/todo_service.js';
 

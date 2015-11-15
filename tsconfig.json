@@ -7,7 +7,8 @@
     },
     "filesGlob": [
         "index.ts",
-        "app/**/*.ts"
+        "app/**/*.ts",
+        "tests/**/*.ts"
     ],
     "files": [
         "index.ts",
@@ -15,6 +16,7 @@
         "app/todo/todo_cmp.ts",
         "app/todo/todo_model.ts",
         "app/todo/todo_service.ts",
-        "app/todo/todo.ts"
+        "app/todo/todo.ts",
+        "tests/todo_service_test.ts"
     ]
 }

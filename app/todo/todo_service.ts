@@ -1,15 +1,18 @@
-import * as Rx from '@reactivex/rxjs/dist/cjs/Rx';
+import {
+  Observable
+} from 'angular2/angular2';
+
 import {TodoModel} from 'app/todo/todo_model.js';
 
 export class TodoService {
-    add(todo: TodoModel):Rx.Observable<any> {
-      return Rx.Observable.create((o) => {
+    add(todo: TodoModel):Observable<any> {
+      return Observable.create((o) => {
         o.next(todo);
       });
     }
 
-    remove(id: number):Rx.Observable<any> {
-      return Rx.Observable.create((o) => {
+    remove(id: number):Observable<any> {
+      return Observable.create((o) => {
         o.next(id);
       });
     }
