@@ -94,7 +94,7 @@ describe('todo_cmp', () => {
     })
   });
 
-  describe('form validation', () => {
+  describe('form stuff', () => {
     it('should have the submit button disabled on creation', injectAsync([TestComponentBuilder], (tcb) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
@@ -124,6 +124,28 @@ describe('todo_cmp', () => {
         fixture.detectChanges();
 
         expect(compiled.getElementsByClassName('todo_button')[0].getAttribute('disabled')).not.toBe(null);
+      });
+    }));
+
+    it('should clear the input after the submit', injectAsync([TestComponentBuilder], (tcb) => {
+      return tcb.createAsync(TodoCmp).then((fixture) => {
+        fixture.detectChanges();
+
+        let compiled = fixture.debugElement.nativeElement;
+        let instance = fixture.debugElement.componentInstance;
+
+        const TEXT = 'something something';
+
+        instance.todoForm.controls.message.updateValue(TEXT);
+
+        fixture.detectChanges();
+
+        expect(compiled.getElementsByClassName('todo_button')[0].getAttribute('disabled')).toBe(null);
+        expect(instance.todoForm.controls.message.value).toBe(TEXT);
+
+        compiled.getElementsByClassName('todo_button')[0].click();
+
+        expect(instance.todoForm.controls.message.value).toBe('');
       });
     }));
   })
