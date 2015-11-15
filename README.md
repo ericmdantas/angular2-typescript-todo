@@ -1,48 +1,40 @@
-# angular2-typescript-todo
+Angular2 Todo written Typescript
 
-Angular2 Todo in Typescript (always updated with the latest from tsc and ng2).
+Always updated with the latest version of  tsc and ng2. And it also has unit tests :D
 
-# Fork this repo
+### Install Typescript (and the definition manager)
 
-
-## Install Typescript (and the definition manager):
-
-```
-
+```shell
 $ npm i -g typescript tsd
-
 ```
 
-## Install all the npm dependencies:
+### Install all the npm dependencies
 
-```
-  
-  $ npm i 
-  
+```shell
+$ npm i 
 ```
 
-## Install live-server (page reload on file change):
+### Install live-server (page reload on file change)
 
-```
-
+```shell
 $ npm i -g live-server
-
 ```
 
-## Run typescript (it'll watch for changes):
+### Compile typescript
 
-```
-
+```shell
 $ tsc
-
 ```
 
-## Run the server:
+### Run the server
 
 ```
-
 $ live-server
-
 ```
 
+### Test
+
+```shell
+$ npm t
+```
 ## Happy coding!
