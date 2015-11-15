@@ -1,9 +1,8 @@
 export class TodoModel {
-    message: string;
-    createdAt: number;
+    message: string = '';
+    createdAt: number = Date.now();
 
-    constructor(message) {
+    constructor(message = '') {
         this.message = message;
-        this.createdAt = Date.now();
     }
 }

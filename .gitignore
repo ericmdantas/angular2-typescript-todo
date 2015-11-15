@@ -2,6 +2,7 @@
 node_modules
 jspm_packages
 app/**/*.js
+**/*.map
 tests/**/*.js
 index.js
 *.js

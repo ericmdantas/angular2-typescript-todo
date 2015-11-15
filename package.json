@@ -1,13 +1,30 @@
 {
   "name": "angular2-typescript-todo",
   "version": "1.0.0",
-  "description": "angular2-todo-typescript",
+  "description": "angular2 typescript todo",
+  "keywords": "Angular2 Todo in Typescript!",
   "main": "index.js",
   "scripts": {
     "start": "tsc",
-    "test": "tsc && karma start karma.conf.js"
+    "test": "karma start karma.conf.js"
   },
-  "author": "",
+  "author": {
+    "name": "Eric Mendes Dantas",
+    "email": "ericdantas0@gmail.com",
+    "url": "https://github.com/ericmdantas"
+  },
+  "keywords": [
+    "angular2",
+    "typescript",
+    "todo",
+    "ng2",
+    "test",
+    "boilerplate",
+    "example",
+    "ng2-karma",
+    "ng2-test",
+    "unit test"
+  ],
   "license": "MIT",
   "devDependencies": {
     "jasmine": "^2.3.2",
@@ -18,6 +35,6 @@
   "dependencies": {
     "angular2": "^2.0.0-alpha.46",
     "reflect-metadata": "^0.1.0",
-    "systemjs": "~0.18.9"
+    "systemjs": "^0.19.5"
   }
 }
