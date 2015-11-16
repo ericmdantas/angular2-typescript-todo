@@ -1,6 +1,6 @@
-Angular2 Todo written Typescript
+### NG2 + TSC + Unit Tests
 
-Always updated with the latest version of  tsc and ng2. And it also has unit tests :D
+Always updated with the latest version of  ng2, tsc and jasmine.
 
 ### Install Typescript (and the definition manager)
 
