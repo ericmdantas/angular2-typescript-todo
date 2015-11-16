@@ -34,7 +34,7 @@ describe('todo_cmp', () => {
     provide(TodoService, {useClass: MockTodoService})
   ]);
 
-  describe('criation', () => {
+  describe('creation', () => {
     it('should have todoList as an empty array', injectAsync([TestComponentBuilder], (tcb) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
