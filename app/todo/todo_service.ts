@@ -2,7 +2,7 @@ import {
   Observable
 } from 'angular2/angular2';
 
-import {TodoModel} from 'app/todo/todo_model.js';
+import {TodoModel} from './todo_model';
 
 export class TodoService {
     add(todo: TodoModel):Observable<any> {

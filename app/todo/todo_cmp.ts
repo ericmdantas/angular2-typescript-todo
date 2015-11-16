@@ -4,12 +4,13 @@ import {
   FORM_DIRECTIVES,
   Validators,
   ControlGroup,
+  Control,
   Inject,
   NgFor
 } from 'angular2/angular2';
 
-import {TodoModel} from 'app/todo/todo_model.js';
-import {TodoService} from 'app/todo/todo_service.js';
+import {TodoModel} from './todo_model';
+import {TodoService} from './todo_service';
 
 @Component({
     selector: 'todo',
@@ -38,7 +39,7 @@ export class TodoCmp {
             .add(this.todo)
             .subscribe(result => {
                 this.todoList.push(result);
-                this.todoForm.controls.message.updateValue("");
+                (<Control>this.todoForm.controls['message']).updateValue("");
             });
     }
 

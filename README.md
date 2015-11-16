@@ -11,7 +11,7 @@ $ npm i -g typescript tsd
 ### Install all the npm dependencies
 
 ```shell
-$ npm i 
+$ npm i
 ```
 
 ### Install live-server (page reload on file change)
@@ -29,7 +29,7 @@ $ tsc
 ### Run the server
 
 ```
-$ live-server
+$ npm start
 ```
 
 ### Test

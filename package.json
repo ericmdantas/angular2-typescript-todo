@@ -5,8 +5,8 @@
   "keywords": "Angular2 Todo in Typescript!",
   "main": "index.js",
   "scripts": {
-    "start": "tsc",
-    "test": "karma start karma.conf.js"
+    "start": "tsc && live-server",
+    "test": "tsc && karma start karma.conf.js"
   },
   "author": {
     "name": "Eric Mendes Dantas",

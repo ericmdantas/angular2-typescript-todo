@@ -1,1 +1,1 @@
-export * from 'app/todo/todo.js';
+export * from './todo/todo';
