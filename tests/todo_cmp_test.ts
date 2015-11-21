@@ -15,7 +15,7 @@ import {Observable} from 'angular2/angular2';
 import {TodoCmp} from '../app/todo/todo_cmp';
 import {TodoService} from '../app/todo/todo_service';
 
-class MockTodoService extends TodoService {
+class MockTodoService {
   add() {
     return Observable.create((o) => {
       o.next(1);
