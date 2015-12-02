@@ -1,12 +1,10 @@
 import {
   Component,
   FormBuilder,
-  FORM_DIRECTIVES,
   Validators,
   ControlGroup,
   Control,
-  Inject,
-  NgFor
+  Inject
 } from 'angular2/angular2';
 
 import {TodoModel} from './todo_model';
@@ -16,8 +14,7 @@ import {TodoService} from './todo_service';
     selector: 'todo',
     templateUrl: 'app/todo/todo.html',
     styleUrls: ['app/todo/todo.css'],
-    providers: [TodoService, FormBuilder],
-    directives: [FORM_DIRECTIVES, NgFor]
+    providers: [TodoService, FormBuilder]
 })
 export class TodoCmp {
     todo: TodoModel;
