@@ -44,8 +44,8 @@ export class TodoCmp {
         this._todoService
             .remove(id)
             .subscribe(id => {
-                this.todoList.forEach((tl, index) => {
-                    if (tl.createdAt === id) {
+                this.todoList.forEach((todo, index) => {
+                    if (todo.createdAt === id) {
                         return this.todoList.splice(index, 1);
                     };
                 });
