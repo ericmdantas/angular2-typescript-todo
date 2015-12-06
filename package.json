@@ -32,7 +32,7 @@
     "karma-jasmine": "^0.3.6"
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.47",
+    "angular2": "^2.0.0-alpha.48",
     "reflect-metadata": "^0.1.0",
     "systemjs": "^0.19.5"
   }
