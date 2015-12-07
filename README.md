@@ -2,39 +2,28 @@
 
 Always updated with the latest version of  ng2, tsc and jasmine.
 
-### Install Typescript (and the definition manager)
-
-```shell
-$ npm i -g typescript tsd
-```
-
 ### Install all the npm dependencies
 
 ```shell
 $ npm i
 ```
 
-### Install live-server (page reload on file change)
+### Compile Typescript
 
 ```shell
-$ npm i -g live-server
-```
-
-### Compile typescript
-
-```shell
-$ tsc
+$ npm run build
 ```
 
 ### Run the server
 
-```
+```shell
 $ npm start
 ```
 
-### Test
+### Run the Tests
 
 ```shell
 $ npm t
 ```
+
 ## Happy coding!
