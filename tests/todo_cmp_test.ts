@@ -9,7 +9,7 @@ import {
 
 import {
   provide
-} from 'angular2/angular2';
+} from 'angular2/core';
 
 import {Observable} from 'angular2/angular2';
 import {TodoCmp} from '../app/todo/todo_cmp';
@@ -17,15 +17,15 @@ import {TodoService} from '../app/todo/todo_service';
 
 class MockTodoService {
   add() {
-    return Observable.create((o) => {
+    return new Observable((o) => {
       o.next(1);
-    })
+    });
   }
 
   remove() {
-    return Observable.create((o) => {
+    return new Observable((o) => {
       o.next(2);
-    })
+    });
   }
 }
 
