@@ -11,7 +11,7 @@ import {
   provide
 } from 'angular2/core';
 
-import {Observable} from 'angular2/angular2';
+import {Observable} from 'rxjs/Observable';
 import {TodoCmp} from '../app/todo/todo_cmp';
 import {TodoService} from '../app/todo/todo_service';
 

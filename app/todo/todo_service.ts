@@ -1,6 +1,6 @@
 import {
   Observable
-} from 'angular2/core';
+} from 'rxjs/Observable';
 
 import {TodoModel} from './todo_model';
 

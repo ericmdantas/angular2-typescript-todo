@@ -1,6 +1,6 @@
 ### NG2 + TSC + Unit Tests
 
-Always updated with the latest version of  ng2 (alpha.52), tsc (1.7) and jasmine (2.3).
+Always updated with the latest version of  ng2 (alpha.53), tsc (1.7) and jasmine (2.3).
 
 ### Install all the npm dependencies
 
