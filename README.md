@@ -1,26 +1,26 @@
-### NG2 + TSC + Unit Tests
+## ng2 + tsc + unit tests
 
-Always updated with the latest version of  ng2 (alpha.53), tsc (1.7) and jasmine (2.3).
+Always updated with the latest version of  ng2 (beta-0), tsc (1.7) and jasmine (2.3).
 
-### Install all the npm dependencies
+### Install
 
 ```shell
 $ npm i
 ```
 
-### Compile Typescript
+### Compile
 
 ```shell
 $ npm run build
 ```
 
-### Run the server
+### Run
 
 ```shell
 $ npm start
 ```
 
-### Run the Tests
+### Test
 
 ```shell
 $ npm t

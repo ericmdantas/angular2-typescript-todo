@@ -7,7 +7,7 @@ import {
   FormBuilder,
   Validators,
   ControlGroup,
-  Control,
+  Control
 } from 'angular2/common';
 
 import {TodoModel} from './todo_model';
