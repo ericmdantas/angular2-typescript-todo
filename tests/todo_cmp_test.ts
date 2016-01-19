@@ -111,7 +111,7 @@ describe('todo_cmp', () => {
     })
   });
 
-  xdescribe('form stuff', () => {
+  describe('form stuff', () => {
     it('should have the submit button disabled on creation', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
