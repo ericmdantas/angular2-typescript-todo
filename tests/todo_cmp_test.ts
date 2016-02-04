@@ -11,13 +11,15 @@ import {
 } from 'angular2/testing';
 
 import {
-  provide,
-  PLATFORM_DIRECTIVES
+  provide
 } from 'angular2/core';
 
+import {setBaseTestProviders} from 'angular2/testing';
+
 import {
-  COMMON_DIRECTIVES,
-} from 'angular2/common';
+  TEST_BROWSER_PLATFORM_PROVIDERS,
+  TEST_BROWSER_APPLICATION_PROVIDERS
+} from 'angular2/platform/testing/browser';
 
 import {Observable} from 'rxjs/Observable';
 import {TodoCmp} from '../app/todo/todo_cmp';
@@ -38,9 +40,10 @@ class MockTodoService {
 }
 
 describe('todo_cmp', () => {
+  setBaseTestProviders(TEST_BROWSER_PLATFORM_PROVIDERS, TEST_BROWSER_APPLICATION_PROVIDERS);
+
   beforeEachProviders(() => [
-    provide(TodoService, {useClass: MockTodoService}),
-    provide(PLATFORM_DIRECTIVES, {useValue: [COMMON_DIRECTIVES]})
+    provide(TodoService, {useClass: MockTodoService})
   ]);
 
   describe('creation', () => {
