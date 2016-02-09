@@ -43,10 +43,6 @@ class MockTodoService {
 describe('todo_cmp', () => {
   setBaseTestProviders(TEST_BROWSER_PLATFORM_PROVIDERS, TEST_BROWSER_APPLICATION_PROVIDERS);
 
-  beforeEachProviders(() => [
-    provide(TodoService, {useClass: MockTodoService})
-  ]);
-
   describe('creation', () => {
     it('should create the cmp correctly', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
@@ -82,7 +78,7 @@ describe('todo_cmp', () => {
   describe('methods', () => {
     describe('add', () => {
       it('should do the right stuff', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-        return tcb.createAsync(TodoCmp).then((fixture) => {
+        return tcb.overrideProviders(TodoCmp, [provide(TodoService, {useClass: MockTodoService})]).createAsync(TodoCmp).then((fixture) => {
           fixture.detectChanges();
 
           let instance = fixture.debugElement.componentInstance;
@@ -98,7 +94,7 @@ describe('todo_cmp', () => {
 
     describe('remove', () => {
       it('should do the right stuff', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-        return tcb.createAsync(TodoCmp).then((fixture) => {
+        return tcb.overrideProviders(TodoCmp, [provide(TodoService, {useClass: MockTodoService})]).createAsync(TodoCmp).then((fixture) => {
           fixture.detectChanges();
 
           let instance = fixture.debugElement.componentInstance;
