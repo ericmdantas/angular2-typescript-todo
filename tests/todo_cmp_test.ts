@@ -6,6 +6,7 @@ import {
   it,
   expect,
   inject,
+  injectAsync,
   TestComponentBuilder,
   beforeEachProviders
 } from 'angular2/testing';
@@ -47,8 +48,8 @@ describe('todo_cmp', () => {
   ]);
 
   describe('creation', () => {
-    it('should create the cmp correctly', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-      tcb.createAsync(TodoCmp).then((fixture) => {
+    it('should create the cmp correctly', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
         let compiled = fixture.debugElement.nativeElement;
@@ -57,8 +58,8 @@ describe('todo_cmp', () => {
       });
     }));
 
-    it('should have todoList as an empty array', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-      tcb.createAsync(TodoCmp).then((fixture) => {
+    it('should have todoList as an empty array', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
         let instance = fixture.debugElement.componentInstance;
@@ -67,8 +68,8 @@ describe('todo_cmp', () => {
       });
     }));
 
-    it('should have _todoService an instance of TodoService', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-      tcb.createAsync(TodoCmp).then((fixture) => {
+    it('should have _todoService an instance of TodoService', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
         let instance = fixture.debugElement.componentInstance;
@@ -80,8 +81,8 @@ describe('todo_cmp', () => {
 
   describe('methods', () => {
     describe('add', () => {
-      it('should do the right stuff', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-        tcb.createAsync(TodoCmp).then((fixture) => {
+      it('should do the right stuff', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+        return tcb.createAsync(TodoCmp).then((fixture) => {
           fixture.detectChanges();
 
           let instance = fixture.debugElement.componentInstance;
@@ -96,8 +97,8 @@ describe('todo_cmp', () => {
     })
 
     describe('remove', () => {
-      it('should do the right stuff', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-        tcb.createAsync(TodoCmp).then((fixture) => {
+      it('should do the right stuff', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+        return tcb.createAsync(TodoCmp).then((fixture) => {
           fixture.detectChanges();
 
           let instance = fixture.debugElement.componentInstance;
@@ -117,8 +118,8 @@ describe('todo_cmp', () => {
   });
 
   describe('form stuff', () => {
-    it('should have the submit button disabled on creation', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-      tcb.createAsync(TodoCmp).then((fixture) => {
+    it('should have the submit button disabled on creation', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
         let compiled = fixture.debugElement.nativeElement;
@@ -128,8 +129,8 @@ describe('todo_cmp', () => {
       });
     }));
 
-    it('should have the submit button enabled after form changes', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-      tcb.createAsync(TodoCmp).then((fixture) => {
+    it('should have the submit button enabled after form changes', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
         let instance = fixture.debugElement.componentInstance;
@@ -149,8 +150,8 @@ describe('todo_cmp', () => {
       });
     }));
 
-    it('should clear the input after the submit', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-      tcb.createAsync(TodoCmp).then((fixture) => {
+    it('should clear the input after the submit', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
         let compiled = fixture.debugElement.nativeElement;
