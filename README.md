@@ -11,7 +11,7 @@ $ npm i
 ### Install definitions
 
 ```shell
-$ tsd install jasmine -so
+$ typings install jasmine --ambient -so
 ```
 
 ### Compile
