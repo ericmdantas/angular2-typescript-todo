@@ -16,7 +16,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
+    "start": "aliv --quiet",
     "test": "npm run build && karma start karma.conf.js",
     "build": "tsc"
   },
@@ -33,10 +33,10 @@
     "karma-jasmine": "^0.3.6"
   },
   "dependencies": {
+    "aliv": "^0.1.0",
     "angular2": "^2.0.0-beta.2",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
-    "live-server": "^0.8.2",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.0",
     "systemjs": "^0.19.5",
