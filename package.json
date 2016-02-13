@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "aliv": "^0.1.0",
-    "angular2": "^2.0.0-beta.5",
+    "angular2": "^2.0.0-beta.6",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
     "reflect-metadata": "^0.1.2",
