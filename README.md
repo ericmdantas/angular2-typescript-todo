@@ -2,16 +2,16 @@
 
 Always updated with the latest version of  ng2 (beta-6), tsc (1.8) and jasmine (2.3).
 
-### Install
+### Install dev dependencies
 
 ```shell
 $ npm i
 ```
 
-### Install definitions
+### Install typings stuff
 
 ```shell
-$ typings install jasmine --ambient -so
+$ typings install
 ```
 
 ### Compile
