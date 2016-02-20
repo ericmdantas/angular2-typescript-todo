@@ -10,4 +10,5 @@ before_install:
 
 before_script:
   - npm install -g typescript typings
+  - typings i
   - tsc
