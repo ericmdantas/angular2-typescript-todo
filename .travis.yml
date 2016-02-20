@@ -9,5 +9,5 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
-  - npm install -g typescript
+  - npm install -g typescript typings
   - tsc
