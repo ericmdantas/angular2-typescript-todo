@@ -33,7 +33,7 @@
     "karma-jasmine": "^0.3.6"
   },
   "dependencies": {
-    "aliv": "^0.2.0",
+    "aliv": "^0.3.0",
     "angular2": "^2.0.0-beta.7",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
