@@ -2,6 +2,7 @@
   "name": "angular2-typescript-todo",
   "version": "1.0.0",
   "description": "angular2 typescript todo",
+  "repository": "ericmdantas/angular2-typescript-todo",
   "keywords": [
     "angular2",
     "typescript",
