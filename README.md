@@ -1,6 +1,9 @@
-## ng2 + tsc + unit tests
+[![Build Status](https://travis-ci.org/ericmdantas/angular2-typescript-todo.svg?branch=master)](https://travis-ci.org/ericmdantas/angular2-typescript-todo)
 
-Always updated with the latest version of  ng2 (beta-6), tsc (1.8) and jasmine (2.3).
+
+## ng2 + tsc + typings + unit tests
+
+Always updated with the latest version of ng2 (beta-7), typescript (1.8), typings (0.6.8) and jasmine (2.3).
 
 ### Install dev dependencies
 
@@ -8,10 +11,16 @@ Always updated with the latest version of  ng2 (beta-6), tsc (1.8) and jasmine (
 $ npm i
 ```
 
+### Install typings globally
+
+```shell
+$ npm i -g typings
+```
+
 ### Install typings stuff
 
 ```shell
-$ typings install
+$ typings i
 ```
 
 ### Compile

@@ -2,6 +2,7 @@
   "name": "angular2-typescript-todo",
   "version": "1.0.0",
   "description": "angular2 typescript todo",
+  "repository": "ericmdantas/angular2-typescript-todo",
   "keywords": [
     "angular2",
     "typescript",
@@ -27,20 +28,20 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "aliv": "^0.3.0",
     "jasmine": "^2.3.2",
     "karma": "^0.13.15",
     "karma-chrome-launcher": "^0.2.1",
     "karma-jasmine": "^0.3.6"
   },
   "dependencies": {
-    "aliv": "^0.2.0",
-    "angular2": "^2.0.0-beta.6",
+    "angular2": "^2.0.0-beta.7",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
     "reflect-metadata": "^0.1.2",
-    "rxjs": "^5.0.0-beta.0",
+    "rxjs": "^5.0.0-beta.2",
     "systemjs": "^0.19.5",
-    "typescript": "^1.7.3",
+    "typescript": "^1.8.0",
     "zone.js": "^0.5.10"
   }
 }

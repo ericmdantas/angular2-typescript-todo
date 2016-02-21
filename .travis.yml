@@ -4,7 +4,8 @@ node_js:
   - "stable"
 
 before_script:
-  - npm install -g typescript
+  - npm install -g typescript typings
+  - typings i
   - tsc
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
