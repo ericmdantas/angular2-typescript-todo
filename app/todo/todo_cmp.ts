@@ -32,6 +32,10 @@ export class TodoCmp {
         });
     }
 
+    customTrackBy(index:number, obj: TodoModel): number {
+      return obj.createdAt;
+    }
+
     add(message: string):void {
         this.todo = new TodoModel(message);
 

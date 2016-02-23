@@ -25,6 +25,7 @@ import {
 import {Observable} from 'rxjs/Observable';
 import {TodoCmp} from '../app/todo/todo_cmp';
 import {TodoService} from '../app/todo/todo_service';
+import {TodoModel} from '../app/todo/todo_model';
 
 class MockTodoService {
   add() {
@@ -76,6 +77,23 @@ describe('todo_cmp', () => {
   });
 
   describe('methods', () => {
+    describe('customTrackBy', () => {
+      it('should return the createdAt correctly', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+        return tcb.createAsync(TodoCmp).then((fixture) => {
+          fixture.detectChanges();
+
+          let instance = fixture.debugElement.componentInstance;
+          let todo = new TodoModel('abc');
+          let index = 0;
+
+          let resultCustomCall = instance.customTrackBy(index, todo);
+
+          expect(resultCustomCall).toBeDefined();
+          expect(resultCustomCall).toBe(todo.createdAt);
+        });
+      }));
+    })
+
     describe('add', () => {
       it('should do the right stuff', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.overrideProviders(TodoCmp, [provide(TodoService, {useClass: MockTodoService})]).createAsync(TodoCmp).then((fixture) => {
