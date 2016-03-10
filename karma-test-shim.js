@@ -14,7 +14,7 @@ System.config({
       format: 'register',
       map: Object.keys(window.__karma__.files)
                  .filter(onlyAppFiles)
-                 .reduce((pathsMapping, appPath) => {
+                 .reduce(function (pathsMapping, appPath) {
                    var moduleName = appPath.replace(/^\/base\/app\//, './').replace(/\.js$/, '');
                    pathsMapping[moduleName] = appPath + '?' + window.__karma__.files[appPath]
 
@@ -25,23 +25,23 @@ System.config({
 });
 
 System.import('angular2/src/platform/browser/browser_adapter')
-      .then((browser_adapter) => {
+      .then(function(browser_adapter) {
         return browser_adapter.BrowserDomAdapter.makeCurrent();
       })
-      .then(() => {
+      .then(function() {
         return Promise.all(
           Object.keys(window.__karma__.files) // All files served by Karma.
                 .filter(onlySpecFiles)
-                .map((moduleName) => {
+                .map(function(moduleName) {
                   return System.import(moduleName);
                 }
               )
          );
        })
-       .then(() => {
+       .then(function() {
          return __karma__.start();
        })
-       .catch((error) => {
+       .catch(function(error) {
          return __karma__.error(error.stack || error);
        });
 
