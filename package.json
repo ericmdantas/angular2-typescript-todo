@@ -42,6 +42,6 @@
     "systemjs": "^0.19.24",
     "typescript": "^1.8.0",
     "typings": "^0.7.9",
-    "zone.js": "^0.6.4"
+    "zone.js": "^0.6.8"
   }
 }
