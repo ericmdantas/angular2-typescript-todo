@@ -3,7 +3,7 @@
 
 ## ng2 + tsc + typings + unit tests
 
-Always updated with the latest version of ng2 (beta-13), typescript (1.8), typings (0.7.9) and jasmine (2.3).
+Always updated with the latest version of ng2 (beta-13), typescript (1.8.9), typings (0.7.9) and jasmine (2.3).
 
 ### Install dev dependencies
 
