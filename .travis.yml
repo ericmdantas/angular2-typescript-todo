@@ -1,12 +1,25 @@
+env:
+  - CXX=g++-4.8
+
 language: node_js
 
 node_js:
   - "stable"
 
-before_script:
-  - npm install -g typescript typings
-  - typings i
-  - tsc
-  - export CHROME_BIN=chromium-browser
+sudo: true
+
+before_install:
+  - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
+  - sudo apt-get update
+  - sudo apt-get install -y libappindicator1 fonts-liberation
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i google-chrome*.deb
   - sh -e /etc/init.d/xvfb start
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
