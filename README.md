@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/ericmdantas/angular2-typescript-todo.svg?branch=master)](https://travis-ci.org/ericmdantas/angular2-typescript-todo)
+[![BuildStatus](https://travis-ci.org/ericmdantas/angular2-typescript-todo.svg?branch=master)](https://travis-ci.org/ericmdantas/angular2-typescript-todo)
 
 
 ## ng2 + tsc + typings + unit tests
 
-Always updated with the latest version of ng2 (beta-14), typescript (1.8.9), typings (0.7.9) and jasmine (2.3).
+Always updated with the latest version of ng2 (beta-15), typescript (1.8.9), typings (0.7.9) and jasmine (2.3).
 
 ### Install dev dependencies
 
