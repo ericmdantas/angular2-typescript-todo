@@ -15,13 +15,6 @@ import {
   provide
 } from 'angular2/core';
 
-import {setBaseTestProviders} from 'angular2/testing';
-
-import {
-  TEST_BROWSER_PLATFORM_PROVIDERS,
-  TEST_BROWSER_APPLICATION_PROVIDERS
-} from 'angular2/platform/testing/browser';
-
 import {Observable} from 'rxjs/Observable';
 import {TodoCmp} from '../app/todo/todo_cmp';
 import {TodoService} from '../app/todo/todo_service';
@@ -42,8 +35,6 @@ class MockTodoService {
 }
 
 describe('todo_cmp', () => {
-  setBaseTestProviders(TEST_BROWSER_PLATFORM_PROVIDERS, TEST_BROWSER_APPLICATION_PROVIDERS);
-
   describe('creation', () => {
     it('should create the cmp correctly', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
