@@ -6,7 +6,7 @@ import {
   it,
   expect,
   inject,
-  injectAsync,
+  async,
   TestComponentBuilder,
   beforeEachProviders
 } from 'angular2/testing';
@@ -36,7 +36,7 @@ class MockTodoService {
 
 describe('todo_cmp', () => {
   describe('creation', () => {
-    it('should create the cmp correctly', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+    it('should create the cmp correctly', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
@@ -44,9 +44,9 @@ describe('todo_cmp', () => {
 
         expect(compiled).toBeDefined();
       });
-    }));
+    })));
 
-    it('should have todoList as an empty array', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+    it('should have todoList as an empty array', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
@@ -54,9 +54,9 @@ describe('todo_cmp', () => {
 
         expect(instance.todoList).toEqual([]);
       });
-    }));
+    })));
 
-    it('should have _todoService an instance of TodoService', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+    it('should have _todoService an instance of TodoService', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
@@ -64,12 +64,12 @@ describe('todo_cmp', () => {
 
         expect(instance._todoService).toBeDefined();
       });
-    }));
+    })));
   });
 
   describe('methods', () => {
     describe('customTrackBy', () => {
-      it('should return the createdAt correctly', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      it('should return the createdAt correctly', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.createAsync(TodoCmp).then((fixture) => {
           fixture.detectChanges();
 
@@ -82,11 +82,11 @@ describe('todo_cmp', () => {
           expect(resultCustomCall).toBeDefined();
           expect(resultCustomCall).toBe(todo.createdAt);
         });
-      }));
+      })));
     })
 
     describe('add', () => {
-      it('should do the right stuff', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      it('should do the right stuff', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.overrideProviders(TodoCmp, [provide(TodoService, {useClass: MockTodoService})]).createAsync(TodoCmp).then((fixture) => {
           fixture.detectChanges();
 
@@ -98,11 +98,11 @@ describe('todo_cmp', () => {
 
           expect(instance.todoList.length).toBe(1);
         });
-      }));
+      })));
     })
 
     describe('remove', () => {
-      it('should do the right stuff', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+      it('should do the right stuff', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.overrideProviders(TodoCmp, [provide(TodoService, {useClass: MockTodoService})]).createAsync(TodoCmp).then((fixture) => {
           fixture.detectChanges();
 
@@ -118,12 +118,12 @@ describe('todo_cmp', () => {
           expect(instance.todoList[1]).toEqual({createdAt: 3});
           expect(instance.todoList[2]).toBeUndefined();
         });
-      }))
+      })))
     })
   });
 
   describe('form stuff', () => {
-    it('should have the submit button disabled on creation', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+    it('should have the submit button disabled on creation', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
@@ -132,9 +132,9 @@ describe('todo_cmp', () => {
         expect(compiled.getElementsByClassName('todo_button')[0].getAttribute('disabled')).not.toBe(null);
         expect(compiled.getElementsByClassName('todo_button')[0].getAttribute('disabled')).toBeDefined();
       });
-    }));
+    })));
 
-    it('should have the submit button enabled after form changes', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+    it('should have the submit button enabled after form changes', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
@@ -153,9 +153,9 @@ describe('todo_cmp', () => {
 
         expect(compiled.getElementsByClassName('todo_button')[0].getAttribute('disabled')).not.toBe(null);
       });
-    }));
+    })));
 
-    it('should clear the input after the submit', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
+    it('should clear the input after the submit', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
       return tcb.createAsync(TodoCmp).then((fixture) => {
         fixture.detectChanges();
 
@@ -175,6 +175,6 @@ describe('todo_cmp', () => {
 
         expect(instance.todoForm.controls.message.value).toBe('');
       });
-    }));
+    })));
   })
 });

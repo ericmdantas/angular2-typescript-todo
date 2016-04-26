@@ -35,11 +35,11 @@
     "karma-jasmine": "^0.3.6"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.15",
+    "angular2": "^2.0.0-beta.16",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "^0.19.24",
     "typescript": "^1.8.9",
     "typings": "^0.7.9",
-    "zone.js": "^0.6.8"
+    "zone.js": "^0.6.12"
   }
 }
