@@ -22,7 +22,7 @@
             <h3 class="nothing_to_do"
                 [hidden]="todoList.length">Nothing to do. Go play outside :D</h3>
 
-            <div class="todo_item" *ngFor="#t of todoList; trackBy:customTrackBy">
+            <div class="todo_item" *ngFor="let t of todoList; trackBy:customTrackBy">
 
                 <span [innerText]="t.message"></span>
 
