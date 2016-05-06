@@ -6,7 +6,7 @@ import {
   beforeEachProviders,
   inject,
   it
-} from 'angular2/testing';
+} from '@angular/core/testing';
 
 import {TodoService} from '../app/todo/todo_service';
 import {TodoModel} from '../app/todo/todo_model';

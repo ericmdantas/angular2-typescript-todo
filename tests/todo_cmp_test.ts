@@ -7,13 +7,16 @@ import {
   expect,
   inject,
   async,
-  TestComponentBuilder,
   beforeEachProviders
-} from 'angular2/testing';
+} from '@angular/core/testing';
+
+import {
+  TestComponentBuilder
+} from '@angular/compiler/testing';
 
 import {
   provide
-} from 'angular2/core';
+} from '@angular/core';
 
 import {Observable} from 'rxjs/Observable';
 import {TodoCmp} from '../app/todo/todo_cmp';

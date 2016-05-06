@@ -4,7 +4,7 @@ import {
   describe,
   it,
   expect
-} from 'angular2/testing';
+} from '@angular/core/testing';
 
 import {TodoModel} from '../app/todo/todo_model';
 

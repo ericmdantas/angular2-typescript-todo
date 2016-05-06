@@ -1,14 +1,14 @@
 import {
   Component,
   Inject
-} from 'angular2/core';
+} from '@angular/core';
 
 import {
   FormBuilder,
   Validators,
   ControlGroup,
   Control
-} from 'angular2/common';
+} from '@angular/common';
 
 import {TodoModel} from './todo_model';
 import {TodoService} from './todo_service';
