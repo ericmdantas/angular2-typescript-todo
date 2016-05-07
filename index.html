@@ -1,27 +1,67 @@
 <!doctype html>
 <html>
-    <head>
-        <base href="/" />
-        <title>ng2do</title>
+<head>
+  <base href="/" />
+  <title>ng2do</title>
 
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
 
-        <link href="app/app.css" rel="stylesheet" type="text/css" />
+  <link href="app/app.css" rel="stylesheet" type="text/css" />
 
-        <script src="node_modules/systemjs/dist/system.js"></script>
-        <script>System.config({defaultJSExtensions: true});</script>
-        <script src="node_modules/rxjs/bundles/Rx.js"></script>
-        <script src="node_modules/@angular/core/core.umd.js" ></script>
-        <script src="node_modules/@angular/compiler/compiler.umd.js" ></script>
-        <script src="node_modules/@angular/common/common.umd.js" ></script>
-        <script src="node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js" ></script>
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script>
+  System.config({
+    defaultJSExtensions: true,
+    packages: {
+      '@angular/common': {
+        main: 'index'
+      },
+      '@angular/compiler': {
+        main: 'index'
+      },
+      '@angular/core': {
+        main: 'index'
+      },
+      '@angular/http': {
+        main: 'index'
+      },
+      '@angular/platform-browser-dynamic': {
+        main: 'index'
+      },
+      '@angular/platform-browser': {
+        main: 'index'
+      },
+      '@angular/router': {
+        main: 'index'
+      },
+      "rxjs": {
+        defaultExtension: 'js'
+      },
+      'dist': {
+        defaultExtension: 'js',
+        format: 'register'
+      }
+    },
+    paths: {
+      '@angular/*': 'node_modules/@angular/*',
+      "rxjs/*": "node_modules/rxjs/*",
+      "reflect-metadata": "node_modules/reflect-metadata"
+    },
+    map: {
+      "rxjs": "node_modules/rxjs"
+    }
+  });
+  </script>
+</head>
+<body>
 
-    </head>
-    <body>
+  <todo></todo>
 
-        <todo></todo>
+  <script>
+    System.import('index.js');
+  </script>
 
-        <script>System.import('index.js');</script>
-
-    </body>
+</body>
 </html>
