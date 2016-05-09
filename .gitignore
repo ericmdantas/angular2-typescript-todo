@@ -10,5 +10,6 @@ tests/**/*.js
 *.log
 
 !karma*.js
+!config*.js
 
 .DS_Store

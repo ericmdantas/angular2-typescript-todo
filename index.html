@@ -9,51 +9,9 @@
   <link href="app/app.css" rel="stylesheet" type="text/css" />
 
   <script src="node_modules/systemjs/dist/system.js"></script>
-  <script src="node_modules/zone.js/dist/zone.js"></script>
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
-  <script>
-  System.config({
-    defaultJSExtensions: true,
-    packages: {
-      '@angular/common': {
-        main: 'index'
-      },
-      '@angular/compiler': {
-        main: 'index'
-      },
-      '@angular/core': {
-        main: 'index'
-      },
-      '@angular/http': {
-        main: 'index'
-      },
-      '@angular/platform-browser-dynamic': {
-        main: 'index'
-      },
-      '@angular/platform-browser': {
-        main: 'index'
-      },
-      '@angular/router': {
-        main: 'index'
-      },
-      "rxjs": {
-        defaultExtension: 'js'
-      },
-      'dist': {
-        defaultExtension: 'js',
-        format: 'register'
-      }
-    },
-    paths: {
-      '@angular/*': 'node_modules/@angular/*',
-      "rxjs/*": "node_modules/rxjs/*",
-      "reflect-metadata": "node_modules/reflect-metadata"
-    },
-    map: {
-      "rxjs": "node_modules/rxjs"
-    }
-  });
-  </script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="config.js"></script>
 </head>
 <body>
 
