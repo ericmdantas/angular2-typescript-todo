@@ -7,7 +7,7 @@ module.exports = function(config) {
 
     files: [
       // paths loaded by Karma
-	  'node_modules/es6-shim/es6-shim.js',
+      //'node_modules/es6-shim/es6-shim.js',
 
       'node_modules/reflect-metadata/Reflect.js',
 
@@ -22,9 +22,8 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/fake-async-test.js',
 
       // RxJs.
-      { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
-      { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
-
+      {pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false},
+      {pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false},
 
       {pattern: 'karma-test-shim.js', included: true, watched: true},
 
@@ -33,9 +32,9 @@ module.exports = function(config) {
       {pattern: 'node_modules/@angular/**/*.js', included: false, watched: true},
       {pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: true},
 
-	  // paths loaded via module imports
-	  {pattern: 'app/**/*.js', included: false, watched: true},
-	  
+      // paths loaded via module imports
+      {pattern: 'app/**/*.js', included: false, watched: true},
+
       // paths loaded via Angular's component compiler
       // (these paths need to be rewritten, see proxies section)
       {pattern: 'app/**/*.html', included: false, watched: true},

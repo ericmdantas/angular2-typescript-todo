@@ -1,38 +1,24 @@
+"use strict";
+
 Error.stackTraceLimit = Infinity;
+
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 
-__karma__.loaded = function () {
-};
-
-
-function isJsFile(path) {
-  return path.slice(-3) == '.js';
-}
-
-function isSpecFile(path) {
-  return path.slice(-8) == '_test.js';
-}
-
-function isBuiltFile(path) {
-  var builtPath = '/base/built/';
-  return isJsFile(path) && (path.substr(0, builtPath.length) == builtPath);
-}
+__karma__.loaded = function () {};
 
 var allSpecFiles = Object.keys(window.__karma__.files)
-  .filter(isSpecFile)
-  .filter(isBuiltFile);
+                         .filter(isSpecFile)
+                         .filter(isTestFileBuilt);
 
-// Load our SystemJS configuration.
 System.config({
   baseURL: '/base'
 });
 
-System.config(
-{
+System.config({
   map: {
-    'rxjs': 'node_modules/rxjs',
     '@angular': 'node_modules/@angular',
-    'app': 'built'
+    'rxjs': 'node_modules/rxjs',
+    'app': 'app'
   },
   packages: {
     'app': {
@@ -66,20 +52,35 @@ System.config(
 });
 
 Promise.all([
-  System.import('@angular/core/testing'),
-  System.import('@angular/platform-browser-dynamic/testing')
-]).then(function (providers) {
-  var testing = providers[0];
-  var testingBrowser = providers[1];
+    System.import('@angular/core/testing'),
+    System.import('@angular/platform-browser-dynamic/testing')
+  ])
+  .then((providers) => {
+    var testing = providers[0];
+    var testingBrowser = providers[1];
 
-  testing.setBaseTestProviders(testingBrowser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
-    testingBrowser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
+    testing.setBaseTestProviders(testingBrowser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
+                                 testingBrowser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
 
-}).then(function() {
-  // Finally, load all spec files.
-  // This will run the tests directly.
-  return Promise.all(
-    allSpecFiles.map(function (moduleName) {
+    return;
+  })
+  .then(() => {
+    return Promise.all(allSpecFiles.map((moduleName) => {
       return System.import(moduleName);
     }));
-}).then(__karma__.start, __karma__.error);
+  })
+  .then(__karma__.start)
+  .catch(__karma__.error);
+
+function isJsFile(path) {
+  return path.slice(-3) == '.js';
+}
+
+function isSpecFile(path) {
+  return path.slice(-8) == '_test.js';
+}
+
+function isTestFileBuilt(path) {
+  var builtPath = '/base/tests/';
+  return isJsFile(path) && (path.substr(0, builtPath.length) == builtPath);
+}
