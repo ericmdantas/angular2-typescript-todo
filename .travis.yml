@@ -7,8 +7,7 @@ sudo: true
 
 before_script:
   - npm install -g typescript typings
-  - typings install
-  - tsc
+  - typings install && tsc
 
 before_install:
   - export CHROME_BIN=/usr/bin/google-chrome
