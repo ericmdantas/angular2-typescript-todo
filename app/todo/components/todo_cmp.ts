@@ -10,13 +10,13 @@ import {
   Control
 } from '@angular/common';
 
-import {TodoModel} from './todo_model';
-import {TodoService} from './todo_service';
+import {TodoModel} from '../models/todo_model';
+import {TodoService} from '../services/todo_service';
 
 @Component({
     selector: 'todo',
-    templateUrl: 'app/todo/todo.html',
-    styleUrls: ['app/todo/todo.css'],
+    templateUrl: 'app/todo/templates/todo.html',
+    styleUrls: ['app/todo/styles/todo.css'],
     providers: [TodoService, FormBuilder]
 })
 export class TodoCmp {

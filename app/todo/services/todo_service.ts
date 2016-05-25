@@ -2,7 +2,7 @@ import {
   Observable
 } from 'rxjs/Observable';
 
-import {TodoModel} from './todo_model';
+import {TodoModel} from '../models/todo_model';
 
 export class TodoService {
     add(todo: TodoModel):Observable<any> {

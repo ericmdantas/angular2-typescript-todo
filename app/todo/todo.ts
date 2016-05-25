@@ -1,2 +1,1 @@
-export * from './todo_model';
-export * from './todo_cmp';
+export * from './components/todo_cmp';

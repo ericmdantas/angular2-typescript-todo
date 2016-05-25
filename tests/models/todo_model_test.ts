@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../../typings/index.d.ts" />
 
 import {
   describe,
@@ -6,7 +6,7 @@ import {
   expect
 } from '@angular/core/testing';
 
-import {TodoModel} from '../app/todo/todo_model';
+import {TodoModel} from '../../app/todo/models/todo_model';
 
 describe('todo_model', () => {
   it('should have the right values - empty constructor', () => {

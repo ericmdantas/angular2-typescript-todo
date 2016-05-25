@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../../typings/index.d.ts" />
 
 import {
   describe,
@@ -19,9 +19,9 @@ import {
 } from '@angular/core';
 
 import {Observable} from 'rxjs/Observable';
-import {TodoCmp} from '../app/todo/todo_cmp';
-import {TodoService} from '../app/todo/todo_service';
-import {TodoModel} from '../app/todo/todo_model';
+import {TodoCmp} from '../../app/todo/components/todo_cmp';
+import {TodoService} from '../../app/todo/services/todo_service';
+import {TodoModel} from '../../app/todo/models/todo_model';
 
 class MockTodoService {
   add() {
