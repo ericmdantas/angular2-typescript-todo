@@ -6,9 +6,10 @@ import {
 import {
   FormBuilder,
   Validators,
-  ControlGroup,
-  Control
-} from '@angular/common';
+  REACTIVE_FORM_DIRECTIVES,
+  FormGroup,
+  FormControl
+} from '@angular/forms';
 
 import {TodoModel} from '../models/todo_model';
 import {TodoService} from '../services/todo_service';
@@ -17,16 +18,15 @@ import {TodoService} from '../services/todo_service';
     selector: 'todo',
     templateUrl: 'app/todo/templates/todo.html',
     styleUrls: ['app/todo/styles/todo.css'],
+    directives: [REACTIVE_FORM_DIRECTIVES],
     providers: [TodoService, FormBuilder]
 })
 export class TodoCmp {
     todo: TodoModel;
-    todoForm: ControlGroup;
+    todoForm: FormGroup;
     todoList: TodoModel[] = [];
 
-    constructor(@Inject(TodoService) private _todoService: TodoService,
-                @Inject(FormBuilder) fb: FormBuilder) {
-
+    constructor(private _todoService: TodoService, fb: FormBuilder) {
         this.todoForm = fb.group({
            "message": ["", Validators.required]
         });
@@ -43,7 +43,7 @@ export class TodoCmp {
             .add(this.todo)
             .subscribe(result => {
                 this.todoList.push(result);
-                (<Control>this.todoForm.controls['message']).updateValue("");
+                (<FormControl>this.todoForm.controls['message']).updateValue("");
             });
     }
 

@@ -30,6 +30,9 @@ System.config({
       '@angular/router': {
         main: 'index'
       },
+      '@angular/forms': {
+        main: 'index'
+      },
       '@angular/http': {
         main: 'index'
       },

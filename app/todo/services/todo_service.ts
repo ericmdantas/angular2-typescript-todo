@@ -3,7 +3,9 @@ import {
 } from 'rxjs/Observable';
 
 import {TodoModel} from '../models/todo_model';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class TodoService {
     add(todo: TodoModel):Observable<any> {
       return new Observable((o) => {

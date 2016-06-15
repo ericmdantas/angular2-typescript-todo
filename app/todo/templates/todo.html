@@ -2,11 +2,11 @@
     <p class="todo_title">ng2do</p>
 
     <div id="todo_form_container">
-        <form [ngFormModel]="todoForm"
+        <form [formGroup]="todoForm"
               (submit)="add(todoForm.value.message)">
 
             <input type="text"
-                   ngControl="message"
+                   formControlName="message"
                    placeholder="What do you have to do?"
                    autofocus
                    class="todo_input" />
