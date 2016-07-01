@@ -7,12 +7,9 @@ import {
   expect,
   inject,
   async,
+  TestComponentBuilder,
   beforeEachProviders
 } from '@angular/core/testing';
-
-import {
-  TestComponentBuilder
-} from '@angular/compiler/testing';
 
 import {
   provide
