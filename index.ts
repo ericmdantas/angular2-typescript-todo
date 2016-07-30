@@ -1,8 +1,10 @@
 import {disableDeprecatedForms, provideForms} from '@angular/forms';
 import {bootstrap} from '@angular/platform-browser-dynamic';
-import {TodoCmp} from './app/app';
+import {App} from './app/app';
+import {TODO_ROUTES_PROVIDERS} from './app/todo/routes/todo_routes';
 
-bootstrap(TodoCmp, [
+bootstrap(App, [
   disableDeprecatedForms(),
-  provideForms()
+  provideForms(),
+  TODO_ROUTES_PROVIDERS
 ]);
