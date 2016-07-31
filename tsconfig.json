@@ -6,8 +6,7 @@
         "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "noImplicitAny": false,
-        "watch": true
+        "noImplicitAny": false
     },
     "exclude": [
       "node_modules",
