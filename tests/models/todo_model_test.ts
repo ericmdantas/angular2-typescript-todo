@@ -1,11 +1,5 @@
 /// <reference path="../../typings/index.d.ts" />
 
-import {
-  describe,
-  it,
-  expect
-} from '@angular/core/testing';
-
 import {TodoModel} from '../../app/todo/models/todo_model';
 
 describe('todo_model', () => {
