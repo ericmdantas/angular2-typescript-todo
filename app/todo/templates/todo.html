@@ -2,18 +2,19 @@
     <p class="todo_title">ng2do</p>
 
     <div id="todo_form_container">
-        <form [formGroup]="todoForm"
-              (submit)="add(todoForm.value.message)">
+        <form name="todoForm"
+              (submit)="add(todoForm.message)">
 
             <input type="text"
-                   formControlName="message"
+                   name="message"
+                   [(ngModel)]="todoForm.message"
                    placeholder="What do you have to do?"
                    autofocus
                    class="todo_input" />
 
             <button type="submit"
                     class="todo_button"
-                    [disabled]="!todoForm.valid">+</button>
+                    [disabled]="!todoForm.message.length">+</button>
         </form>
 
         <div id="todo_list_container">
