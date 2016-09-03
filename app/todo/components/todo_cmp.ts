@@ -4,9 +4,7 @@ import {
 } from '@angular/core';
 
 import {
-  FormBuilder,
   Validators,
-  REACTIVE_FORM_DIRECTIVES,
   FormGroup,
   FormControl
 } from '@angular/forms';
@@ -17,19 +15,17 @@ import {TodoService} from '../services/todo_service';
 @Component({
     selector: 'todo',
     templateUrl: 'app/todo/templates/todo.html',
-    styleUrls: ['app/todo/styles/todo.css'],
-    directives: [REACTIVE_FORM_DIRECTIVES],
-    providers: [TodoService, FormBuilder]
+    styleUrls: ['app/todo/styles/todo.css']
 })
 export class TodoCmp {
     todo: TodoModel;
-    todoForm: FormGroup;
+    todoForm: {message: string};
     todoList: TodoModel[] = [];
 
-    constructor(private _todoService: TodoService, fb: FormBuilder) {
-        this.todoForm = fb.group({
-           "message": ["", Validators.required]
-        });
+    constructor(private _todoService: TodoService) {
+        this.todoForm = {
+           message: ""
+        };
     }
 
     customTrackBy(index:number, obj: TodoModel): number {
@@ -43,7 +39,7 @@ export class TodoCmp {
             .add(this.todo)
             .subscribe(result => {
                 this.todoList.push(result);
-                (<FormControl>this.todoForm.controls['message']).updateValue("");
+                this.todoForm.message = "";
             });
     }
 

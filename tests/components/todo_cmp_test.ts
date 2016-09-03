@@ -1,14 +1,10 @@
 /// <reference path="../../typings/index.d.ts" />
 
 import {
-  describe,
-  xdescribe,
-  it,
-  expect,
-  inject,
   async,
+  inject,
   TestComponentBuilder,
-  beforeEachProviders
+  addProviders
 } from '@angular/core/testing';
 
 import {
