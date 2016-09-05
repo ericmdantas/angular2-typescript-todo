@@ -1,5 +1,5 @@
 import { NgModule }       from '@angular/core';
-import { FormsModule, REACTIVE_FORM_DIRECTIVES, FormBuilder }       from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormBuilder }       from '@angular/forms';
 import { BrowserModule  } from '@angular/platform-browser';
 import { App }   from './app';
 import { TodoCmp }   from './todo/components/todo_cmp';
