@@ -1,20 +1,13 @@
 /// <reference path="../../typings/index.d.ts" />
 
 import {
-  inject,
-  addProviders
+  inject
 } from '@angular/core/testing';
 
 import {TodoService} from '../../app/todo/services/todo_service';
 import {TodoModel} from '../../app/todo/models/todo_model';
 
 describe('todo_service', () => {
-  beforeEach(() => addProviders([
-	{
-		provide: TodoService
-	}
-  ]));
-
   describe('add', () => {
     it('should do something', inject([TodoService], (service) => {
       let _todo = new TodoModel();
