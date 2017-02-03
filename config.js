@@ -4,7 +4,8 @@ System.config({
       'npm:': 'node_modules/'
     },
     map: {
-      "rxjs": "node_modules/rxjs",
+      "rxjs": "npm:rxjs",
+      "simble-observable": "npm:symble-observable",
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -22,6 +23,6 @@ System.config({
       '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/http/testing': 'npm:@angular/http/bundles/http-testing.umd.js',
       '@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
-      '@angular/forms/testing': 'npm:@angular/forms/bundles/forms-testing.umd.js',    
+      '@angular/forms/testing': 'npm:@angular/forms/bundles/forms-testing.umd.js',
     }
   });
